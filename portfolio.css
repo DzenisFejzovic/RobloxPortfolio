@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* #container {
+  
+} */
+
+p {
+  color: rgb(72, 255, 0);
+  font-size: 16px;
+}
+
+input {
+  font-size: 16px;
+  width: 100%;
+  color: rgb(72, 255, 0);
+  background-color: black;
+  border: none;
+  outline: none;
+}
+
+a {
+  color: rgb(251, 255, 0);
+  margin-left: 20px;
+  cursor: grab;
+}
+
+.InputHolder {
+  display: flex;
+  align-items: center;
+}
