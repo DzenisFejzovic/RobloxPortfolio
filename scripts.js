@@ -1,10 +1,8 @@
-// Create audio element once
-const typeSound = new Audio("typing.wav");
-typeSound.volume = 0.05; // Reduce volume to 20%
+
 
 const Commands = {
   help: {
-    answer: "List of commands: showcase, socials, contributed, goodmessage, bird",
+    answer: "List of commands: showcase, socials, contributed, goodmessage, bird, hello",
   },
   showcase: {
     answer: "These are showcases of my work:",
@@ -17,11 +15,11 @@ const Commands = {
         "https://x.com/ZergoScripts/status/1934224305312649569",
       "Combat System in 1 Hour Challenge":
         "https://x.com/ZergoScripts/status/1934467498646306844",
-      "Airship System": "https://x.com/ZergoScripts/status/1934467498646306844",
+      "Airship System": "https://x.com/ZergoScripts/status/1949897668957979115",
     },
   },
   contributed: {
-    answer: "These are showcases of my work:",
+    answer: "These are my contributions:",
     links: {
       "Girls battlegrounds":
         "https://www.roblox.com/games/131918416959711/UPD-Girls-Battlegrounds",
@@ -44,6 +42,9 @@ const Commands = {
   bird: {
     answer: `𓅪`,
   },
+  hello: {
+    answer: `hi`,
+  },
 };
 
 let typing = false;
@@ -59,12 +60,7 @@ function typeWriter(element, text, speed = 50) {
       if (i < text.length) {
         element.textContent += text.charAt(i);
         // Play a clone of the typing sound with random pitch
-        const soundClone = typeSound.cloneNode();
-        // Random playback rate between 0.8 and 1.2 for slight pitch variation
-        soundClone.playbackRate = 0.8 + Math.random() * 1;
-        soundClone
-          .play()
-          .catch((err) => console.log("Audio play failed:", err));
+        
         i++;
         setTimeout(type, speed);
       } else {
